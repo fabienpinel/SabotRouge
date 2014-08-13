@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
 @font-face {
 	font-family: "roboto";
 	src: url('../font/Roboto-Light.ttf');
@@ -14,27 +15,35 @@ a {color: #03f;}
 a:hover {color: #69f;}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
-::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
-::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+::-moz-selection{background: red; color: #fff; text-shadow: none;}
+::selection {background: red; color: #fff; text-shadow: none;} 
 
 /*	j.mp/webkit-tap-highlight-color */
-a:link {-webkit-tap-highlight-color: #fcd700;} 
+a:link {-webkit-tap-highlight-color: red;} 
 
-ins {background-color: #fcd700; color: #000; text-decoration: none;}
-mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+ins {background-color: red; color: #000; text-decoration: none;}
+mark {background-color: red; color: #000; font-style: italic; font-weight: bold;}
 
 /* Mozilla dosen't style place holders by default */
 input:-moz-placeholder { color:#a9a9a9; }
 textarea:-moz-placeholder { color:#a9a9a9; }
 h2{
 	font: 55px roboto, Freesans, sans-serif;
+	font-weight: 300;
+}
+h1{
+	font: 75px Roboto, Freesans, sans-serif;
+	font-weight: 500;
 }
 p{
-	font-size: 25px;
+	font: 25px roboto, Freesans, sans-serif;;
 	line-height: 30px;
 }
 small{
 	font-size: 50%;
+}
+.story{
+	padding-top: 30px;
 }
 #logoRed{
 	width: 100%;
@@ -42,22 +51,48 @@ small{
 	background-color: red;
 	margin: auto;
 	padding-right: 0px;
+
 }
 #story-header .story{
 	padding-right: 0px;
 	width: 100%;
+
+}
+#story-header{
+	background: url(../images/texture-header.jpg);
+	height: 900px;
+	margin: 0 auto;
+	padding: 0;
+	color: white;
+	text-align: center;
 }
 #story-main{
-	color: white;
-	max-height: 200px;
+	background: url(../images/triangular.png);
+	color: black;
+	height: 600px;
+	margin: 0 auto;
+	padding: 0;
+}
+#story-main .story{
+	width: 100%;
+	
+}
+#story-main article{
+	margin-left: 10%;
+	margin-right: 10%;
 }
 #story-footer .story{
 	padding-right: 0px;
 	width: 100%;
 	text-align: center;
+	color: white;
 }
 #story-footer{
 	background-color: grey;
+	height: 250px;
+	background: grey;
+	margin: 0 auto;
+	padding: 0;
 
 }
 #subscribe{
@@ -68,7 +103,7 @@ small{
 	text-align: center;
 	min-width: 300px;
 	background: transparent;
-	color: white;
+	color: red;
 	height: 48px;
 	margin: 0;
 	padding: 0;

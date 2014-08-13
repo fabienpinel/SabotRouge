@@ -42,7 +42,6 @@
 	<!-- concatenate and minify for production -->
 
 	<link rel="stylesheet" href="assets/css/reset.css" />
-	<link rel="stylesheet" href="assets/css/chrome.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
 
 	
@@ -76,43 +75,65 @@
 	<script>
 		window.jQuery || document.write("<script src='assets/js/libs/jquery-1.11.0.min.js'>\x3C/script>")
 	</script>
-	<script type="text/javascript" src="assets/js/libs/side-nav.js"></script>
-	<script type="text/javascript" src="assets/js/libs/backgrounds.js"></script>
-	<script type="text/javascript" src="assets/js/libs/kinetics.js"></script>
+		<!-- parallax.js really screws with the DOM, so make sure it's included last so other things don't notice :) -->
+	<script type="text/javascript" src="assets/js/libs/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="assets/js/libs/jquery.localscroll-1.2.7-min.js"></script>
+	<script type="text/javascript" src="assets/js/libs/jquery.scrollTo-1.4.2-min.js"></script>
 
-	<!-- parallax.js really screws with the DOM, so make sure it's included last so other things don't notice :) -->
-	<script type="text/javascript" src="assets/js/libs/parallax.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+	$('#nav').localScroll(800);
+	
+	//.parallax(xPosition, speedFactor, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#story-header').parallax("50%", 0.5);
+	$('#story-main').parallax("50%", 1.3);
+	/*$('.bg').parallax("20%", 0.4);*/
+	$('#story-footer').parallax("50%", 0.3);
+
+})
+</script>
+	</script>
 
 </head>
 
 <body>
 <!-- this is to make the page's vertical scrollbar appear the correct height -->
-<div id="mock-scroller"></div>
-<ul id="nav"></ul>
 
 <div id="content">
 	<section id="story-header">
-		<img class="bg animate" src="assets/images/texture-header.jpg" />	
+		<!--<img class="bg" src="assets/images/texture-header.jpg" />	-->
 		<div class="story">
 			<div id="logoRed">
 				<img width="200px" src="assets/images/Le Sabot Rouge_logodéfinitif.jpg" />
 			</div>
+			<article>
+				<h1>Bonjour et bienvenue !</h1>
+				<p>Vous êtes sur le site officiel du Sabot Rouge.</p>
+			</article>
 		</div>
 	</section>
 	
 	<section id="story-main" data-nav="main">
-		<img class="bg animate" src="assets/images/texture-bois.jpg" anim-detached="true" />
+		<!--<img class="bg" src="assets/images/texture-bois.jpg" />-->
 		<div class="story">
-			<h2>Article Header</h2>
-			<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
-			<h2>Article Subhead</h2>
-			<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
+			<article>
+				<h2>Article Header</h2>
+				<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
+				<h2>Article Subhead</h2>
+				<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
+			</article>
 		</div>
 	</section>
 	
 	
 	<section id="story-footer" data-nav="footer">
 		<div class="story">
+			<h2 style='text-align: center;'>Newsletter</h2>
+			<br />
 			<form id="subscribe" class="form" method="post" action="newsletter.php">
             <div class="formulaire">
               <input type="email"  class="input-email" placeholder="your@email.com" required>
@@ -120,7 +141,6 @@
             </div>
           </form>
           <br />
-			<img class="logo animate" src="assets/images/Le Sabot Rouge_logodéfinitif.jpg" anim-detached="true" width="200px" />
 			<p><small>&copy; Copyright Sabot Rouge 2012-2014. All Rights Reserved.</small></p>
 		</div>
 	</section>
