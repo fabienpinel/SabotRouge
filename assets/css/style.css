@@ -23,6 +23,29 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 input:-moz-placeholder { color:#a9a9a9; }
 textarea:-moz-placeholder { color:#a9a9a9; }
 
+#logoRed{
+	width: 100%;
+	text-align: center;
+	background-color: red;
+	margin: auto;
+	padding-right: 0px;
+}
+#story-header .story{
+	padding-right: 0px;
+	width: 100%;
+}
+#story-main{
+	color: white;
+}
+#story-footer .story{
+	padding-right: 0px;
+	width: 100%;
+	text-align: center;
+}
+#story-footer{
+	background-color: grey;
+}
+
 /* Media queries
 -------------------------------------------------------------------------------*/
 

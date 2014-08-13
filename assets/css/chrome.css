@@ -164,7 +164,7 @@ ul#nav a {
 }
 
 ul#nav a:hover, nav#main li.active a {
-	background : url('../images/grey-pink-dot.png') 0 100% no-repeat;
+	background : url('../images/grey-red-dot.png') 0 100% no-repeat;
 }
 
 ul#nav h1 {
