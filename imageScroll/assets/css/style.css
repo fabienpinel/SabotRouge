@@ -1,0 +1,121 @@
+@font-face {
+	font-family: "roboto";
+	src: url('../font/Roboto-Light.ttf');
+}
+/* A Linux- and Windows-friendly sans-serif font stack: http://prospects.mhurrell.co.uk/post/updating-the-helvetica-font-stack */
+body {font: 13px Helmet, Freesans, sans-serif;}
+
+/* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
+
+/* We like off-black for text. */
+body, select, input, textarea {color: #333;}
+
+a {color: #03f;}
+a:hover {color: #69f;}
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;} 
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder { color:#a9a9a9; }
+textarea:-moz-placeholder { color:#a9a9a9; }
+h2{
+	font: 55px roboto, Freesans, sans-serif;
+}
+p{
+	font-size: 25px;
+	line-height: 30px;
+}
+small{
+	font-size: 50%;
+}
+#logoRed{
+	width: 100%;
+	text-align: center;
+	background-color: red;
+	margin: auto;
+	padding-right: 0px;
+}
+#story-header .story{
+	padding-right: 0px;
+	width: 100%;
+}
+#story-bois{
+	height: 250px;
+	background-color: grey;
+
+}
+#story-header{
+	color: white;
+	text-align: center;
+}
+#story-main{
+	background: black;
+	color: white;
+	height: 350px;
+}
+#story-footer .story{
+	padding-right: 0px;
+	width: 100%;
+	text-align: center;
+}
+#story-footer{
+	background-color: grey;
+
+}
+#subscribe{
+	font: 15px roboto, Freesans, sans-serif;
+	text-align: center;
+}
+#subscribe .input-email{
+	text-align: center;
+	min-width: 300px;
+	background: transparent;
+	color: white;
+	height: 48px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid white;
+	display : inline-block;
+}
+#subscribe .submit-button{
+	height: 50px;
+	padding: 13px 35px;
+	margin: 0;
+	cursor: pointer;
+	margin-left: -4px;
+}
+#subscribe .submit-button{
+	background: transparent;
+	color: white;
+	border: 1px solid white;
+}
+#subscribe .submit-button:hover{
+	background: red;
+	color: white;
+	border-color: red;
+}
+/* Media queries
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+	
+		
+}
+
+
+
+/* Print styles
+-------------------------------------------------------------------------------*/
+@media print {
+
+
+
+}
