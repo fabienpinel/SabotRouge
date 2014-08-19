@@ -50,6 +50,7 @@ small{
 #story-bois{
 	height: 250px;
 	background-color: grey;
+	color: white;
 
 }
 #story-header{
@@ -57,9 +58,9 @@ small{
 	text-align: center;
 }
 #story-main{
-	background: black;
+	background: #C0C0C0;
 	color: white;
-	height: 350px;
+	height: 300px;
 }
 #story-footer .story{
 	padding-right: 0px;
@@ -68,7 +69,11 @@ small{
 }
 #story-footer{
 	background-color: grey;
+	color: white;
 
+}
+#story-main, #story-bois, #story-footer{
+	background: url(../images/bg-texture-dark.jpg);
 }
 #subscribe{
 	font: 15px roboto, Freesans, sans-serif;

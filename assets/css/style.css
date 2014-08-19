@@ -48,11 +48,11 @@ small{
 	width: 100%;
 }
 #story-header{
-	color: white;
+	color: black;
 	text-align: center;
 }
 #story-main{
-	color: white;
+	color: black;
 	max-height: 200px;
 }
 #story-footer .story{
