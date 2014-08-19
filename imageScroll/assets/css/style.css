@@ -14,14 +14,14 @@ a {color: #03f;}
 a:hover {color: #69f;}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
-::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
-::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+::-moz-selection{background: red; color: #fff; text-shadow: none;}
+::selection {background: red; color: #fff; text-shadow: none;} 
 
 /*	j.mp/webkit-tap-highlight-color */
-a:link {-webkit-tap-highlight-color: #fcd700;} 
+a:link {-webkit-tap-highlight-color: red;} 
 
-ins {background-color: #fcd700; color: #000; text-decoration: none;}
-mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+ins {background-color: red; color: #000; text-decoration: none;}
+mark {background-color: red; color: #000; font-style: italic; font-weight: bold;}
 
 /* Mozilla dosen't style place holders by default */
 input:-moz-placeholder { color:#a9a9a9; }
@@ -29,9 +29,12 @@ textarea:-moz-placeholder { color:#a9a9a9; }
 h2{
 	font: 55px roboto, Freesans, sans-serif;
 }
+h3{
+	font: 45px roboto, Freesans, sans-serif;
+}
 p{
 	font-size: 25px;
-	line-height: 30px;
+	line-height: 33px;
 }
 small{
 	font-size: 50%;
@@ -47,33 +50,41 @@ small{
 	padding-right: 0px;
 	width: 100%;
 }
-#story-bois{
-	height: 250px;
+#story-cols{
 	background-color: grey;
 	color: white;
-
+}
+#story-cols h3{
+	text-align: center;
+}
+#story-cols .row{
+	padding: 0px 3% 0px 3%;
 }
 #story-header{
 	color: white;
 	text-align: center;
 }
 #story-main{
-	background: #C0C0C0;
-	color: white;
-	height: 300px;
+	height: 180px;
 }
-#story-footer .story{
+#story-main .story{
+	padding-top: 20px;
+}
+#story-footer .storyFooter{
 	padding-right: 0px;
 	width: 100%;
 	text-align: center;
 }
-#story-footer{
-	background-color: grey;
-	color: white;
-
+#story-footer p{
+	text-align: center;
 }
-#story-main, #story-bois, #story-footer{
+#adresse{
+	text-align: center;
+	/*padding: 0px 5% 0px 5%;*/
+}
+section{
 	background: url(../images/bg-texture-dark.jpg);
+	color: white;
 }
 #subscribe{
 	font: 15px roboto, Freesans, sans-serif;
@@ -83,7 +94,7 @@ small{
 	text-align: center;
 	min-width: 300px;
 	background: transparent;
-	color: white;
+	color: red;
 	height: 48px;
 	margin: 0;
 	padding: 0;
@@ -106,6 +117,11 @@ small{
 	background: red;
 	color: white;
 	border-color: red;
+}
+.story{
+	margin: 0 10% 0 10%;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 /* Media queries
 -------------------------------------------------------------------------------*/
