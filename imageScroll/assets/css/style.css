@@ -32,6 +32,9 @@ h2{
 h3{
 	font: 45px roboto, Freesans, sans-serif;
 }
+h4{
+	font: 35px roboto, Freesans, sans-serif;
+}
 p{
 	font-size: 25px;
 	line-height: 33px;
@@ -122,6 +125,11 @@ section{
 	margin: 0 10% 0 10%;
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+ #map{
+	width: 600px;
+	height: 450px;
 }
 /* Media queries
 -------------------------------------------------------------------------------*/

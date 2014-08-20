@@ -77,6 +77,36 @@
 	<script>
 		window.jQuery || document.write("<script src='assets/js/libs/jquery-1.11.0.min.js'>\x3C/script>")
 	</script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzIofk0FtnCnTh2monsywdm_BzHNA2IsM&sensor=false"></script>
+	<script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 16,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(49.1867273, -1.4084370),
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},
+                {featureType:"road.highway",stylers:[ { "color": "#DF0101" },{ "hue": "#ff0022" },{"lightness": 27 },{saturation:-40},{visibility:"simplified"}]},
+            {featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",stylers:[{visibility:"on"}]},{featureType:"administrative.neighborhood",stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+            }
+        </script>
 	
 </head>
 
@@ -102,19 +132,19 @@
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
-					<h3>Sabots</h3>
+					<h3 style="color: red;">Sabots</h3>
 					<p>Contenu, contenu, contenu, contenu, contenu, contenu, contenu,  </p>
 					<p>Contenu, contenu, contenu, contenu, contenu, contenu, contenu,  </p>
 				</div>
 				<div class="col-sm-4">
-					<h3>Rouges</h3>
+					<h3 style="color: red;">Rouges</h3>
 					<p>Ceci est une description</p>
 					<p>Ceci est une autre description</p>
 					<p>Ceci est une description</p>
 					<p>Ceci est une autre description</p>
 				</div>
 				<div class="col-sm-4">
-					<h3>Normands</h3>
+					<h3 style="color: red;">Normands</h3>
 					<p>Ici on explique certaines choses.</p>
 					<p>Ici aussi.</p>
 					<p>Ici on explique certaines choses.</p>
@@ -132,13 +162,22 @@
 			<p>Vous pouvez nous trouver ici et là.</p>
 			<br />
 			<div class="row">
-  				<div class="col-md-6"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d167145.77621055985!2d-1.2932098094704674!3d49.11223692342572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe651a0ba4acddee5!2sLe+Sabot+Rouge!5e0!3m2!1sfr!2sfr!4v1408467635133" width="600" height="450" frameborder="0" style="border:0"></iframe></div>
+  				<div class="col-md-6">
+  					<!--<div id="map"></div>-->
+  					<iframe src="https://mapsengine.google.com/map/embed?mid=zkmB_JXRoGv4.kaTy1pzXrGjM" width="640" height="480"></iframe>
+  				</div>
   				<div id="adresse" class="col-md-6">
-  					<h3>Adresse</h3>
+  					<h3>Adresses</h3>
   					<br /><br />
-  					<p>1 ère ligne de l'adresse</p>
-  					<p>2 ème ligne de l'adresse</p>
-  					<p>3 ème ligne de l'adresse</p>
+  					<h4 style="color: red;">Périers</h4>
+  					<p>Le Sabot Rouge</p>
+  					<p>10 Place du général Leclerc</p>
+  					<p>50190 Périers</p>
+  					<br /><br />
+  					<h4 style="color: red;">Autre</h4>
+  					<p>Le Sabot Rouge</p>
+  					<p>10 Place du général Leclerc</p>
+  					<p>50190 Périers</p>
   				</div>
   			</div>
 
