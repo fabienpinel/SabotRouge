@@ -144,10 +144,6 @@
   					<p>10 Place du général Leclerc</p>
   					<p>50190 Périers</p>
   					<br />
-  					<h4 style="color: red;">Saint Hilaire du Harcouët</h4>
-  					<p>10 Place du général Leclerc</p>
-  					<p>50190 Périers</p>
-  					<br />
   					<h4 style="color: red;">Lecousse</h4>
   					<p>10 Place du général Leclerc</p>
   					<p>50190 Périers</p>
@@ -207,20 +203,24 @@ Modernizr entre en conflit avec parallax donc il est désactivé ici-->
 -->
 <script src="assets/js/libs/jquery.imageScroll.js"></script>
  <script>
+ 	if (navigator.userAgent.match(/(android|iphone|blackberry|symbian|symbianos|symbos|netfront|model-orange|javaplatform|iemobile|windows phone|samsung|htc|opera mobile|opera mobi|opera mini|presto|huawei|blazer|bolt|doris|fennec|gobrowser|iris|maemo browser|mib|cldc|minimo|semc-browser|skyfire|teashark|teleca|uzard|uzardweb|meego|nokia|bb10|playbook)/gi)) {
+    	//alert('mobile');
+   
         $('.img-holder').imageScroll({
-//            image: null,
-//            imageAttribute: 'image',
-//            container: $('body'),
-//            speed: 0.2,
-//            coverRatio: 0.75,
-//            holderClass: 'imageHolder',
-//            holderMinHeight: 200,
-//            extraHeight: 0,
-//            mediaWidth: 1600,
-//            mediaHeight: 900,
-//            parallax: true,
-//            touch: false
+            image: null,
+            imageAttribute: 'image',
+            container: $('body'),
+            speed: 0.3,
+            coverRatio: 0.75,
+            holderClass: 'imageHolder',
+            holderMinHeight: 200,
+            extraHeight: 0,
+            mediaWidth: 1600,
+            mediaHeight: 900,
+           parallax: true,
+            touch: false
         });
+    }
     </script>
   
 </body>
