@@ -71,7 +71,7 @@ small{
 	text-align: center;
 }
 #story-main{
-	height: 180px;
+	min-height: 180px;
 }
 #story-main .story{
 	padding-top: 20px;
