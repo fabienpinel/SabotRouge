@@ -205,8 +205,22 @@ Modernizr entre en conflit avec parallax donc il est désactivé ici-->
  <script>
  	if (navigator.userAgent.match(/(android|iphone|blackberry|symbian|symbianos|symbos|netfront|model-orange|javaplatform|iemobile|windows phone|samsung|htc|opera mobile|opera mobi|opera mini|presto|huawei|blazer|bolt|doris|fennec|gobrowser|iris|maemo browser|mib|cldc|minimo|semc-browser|skyfire|teashark|teleca|uzard|uzardweb|meego|nokia|bb10|playbook)/gi)) {
     	//alert('mobile');
-   
-        $('.img-holder').imageScroll({
+    	$('.img-holder').imageScroll({
+            image: null,
+            imageAttribute: 'image',
+            container: $('body'),
+            speed: 1,
+            coverRatio: 1,
+            holderClass: 'imageHolder',
+            holderMinHeight: 200,
+            extraHeight: 0,
+            mediaWidth: 1600,
+            mediaHeight: 900,
+           parallax: false,
+            touch: true
+        });
+    }else{
+    	$('.img-holder').imageScroll({
             image: null,
             imageAttribute: 'image',
             container: $('body'),
